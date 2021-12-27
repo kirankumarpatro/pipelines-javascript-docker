@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kirankumarpatropipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kirankumarpatropipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: kirankumarpatropipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kirankumarpatropipelinesjavascriptdocker 
+          image: kirancontainerregistry8121368180.azurecr.io/kirankumarpatropipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
